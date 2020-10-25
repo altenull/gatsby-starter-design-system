@@ -1,5 +1,6 @@
 import React from 'react';
+import { Layout } from '../components/foundation';
 
 export default () => {
-  return <div>Hello world!</div>;
+  return <Layout>Hello world!</Layout>;
 };
