@@ -8,5 +8,5 @@ module.exports = {
     title: `Gatsby Design System Starter`,
     description: `A simple starter to build a design system with Gatsby.`,
   },
-  plugins: [],
+  plugins: ['gatsby-plugin-styled-components'],
 };
