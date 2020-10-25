@@ -8,8 +8,16 @@ const React = require('react');
 const { createGlobalStyle } = require('styled-components');
 
 const GlobalStyle = createGlobalStyle`
+  html, body, #___gatsby, #gatsby-focus-wrapper {
+    height: 100%;
+  }
+
   body {
     margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
   }
 `;
 
