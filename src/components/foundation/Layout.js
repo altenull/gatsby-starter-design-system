@@ -9,6 +9,10 @@ const StdLayout = styled.div`
   height: 100%;
 `;
 
+const StdMain = styled.main`
+  width: 100%;
+`;
+
 const Layout = ({ children }) => {
   return (
     <Fragment>
@@ -16,7 +20,7 @@ const Layout = ({ children }) => {
 
       <StdLayout>
         <Sidebar />
-        {children}
+        <StdMain>{children}</StdMain>
       </StdLayout>
     </Fragment>
   );
