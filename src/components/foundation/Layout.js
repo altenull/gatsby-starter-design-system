@@ -1,13 +1,24 @@
 import PropTypes from 'prop-types';
-import React from 'react';
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
 import Header from './Header';
+import Sidebar from './Sidebar';
+
+const StdLayout = styled.div`
+  display: flex;
+  height: 100%;
+`;
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <Fragment>
       <Header />
-      {children}
-    </div>
+
+      <StdLayout>
+        <Sidebar />
+        {children}
+      </StdLayout>
+    </Fragment>
   );
 };
 
