@@ -4,8 +4,11 @@
  * See: https://www.gatsbyjs.com/docs/browser-apis/
  */
 // You can delete this file if you're not using it
+
 const React = require('react');
 const { createGlobalStyle, ThemeProvider } = require('styled-components');
+
+require('prismjs/themes/prism-tomorrow.css');
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
