@@ -1,18 +1,64 @@
 import React from 'react';
 import styled from 'styled-components';
+import SidebarNavItem from './SidebarNavItem';
+
+const SIDEBAR_NAV_ITEM_LINKS_WITH_TITLE = [
+  {
+    title: 'Getting Started',
+    links: ['About', 'For designers', 'For developers'],
+  },
+  {
+    title: 'Foundation',
+    links: ['Design principles', 'Colors', 'Typographys', 'Icons'],
+  },
+  {
+    title: 'Components',
+    links: [
+      'Accordion',
+      'Alert',
+      'Badge',
+      'Button',
+      'Card',
+      'Checkbox',
+      'Dialog',
+      'Dropdown',
+      'Input',
+      'Loading',
+      'Radio button',
+      'Select',
+      'Table',
+      'Tabs',
+      'Toggle',
+    ],
+  },
+];
 
 const StdSidebar = styled.nav`
   position: fixed;
-  width: ${(props) => props.theme.sharedSizes.sidebarWidth};
   top: 0;
   bottom: 0;
-  padding: 64px 0;
-  background-color: #aaa;
+  overflow-y: auto;
+  width: ${(props) => props.theme.sharedSizes.sidebarWidth};
+  padding: ${(props) => props.theme.sharedSizes.headerHeight} 0 0;
   z-index: ${(props) => props.theme.zIndexes.sidebar};
 `;
 
+const StdUlWrapper = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+`;
+
 const Sidebar = () => {
-  return <StdSidebar>Sidebar</StdSidebar>;
+  const sidebarNavItems = SIDEBAR_NAV_ITEM_LINKS_WITH_TITLE.map(({ title, links }, index) => (
+    <SidebarNavItem key={index} title={title} links={links} />
+  ));
+
+  return (
+    <StdSidebar>
+      <StdUlWrapper>{sidebarNavItems}</StdUlWrapper>
+    </StdSidebar>
+  );
 };
 
 export default Sidebar;
