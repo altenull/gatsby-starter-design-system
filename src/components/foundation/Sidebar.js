@@ -41,6 +41,7 @@ const StdSidebar = styled.nav`
   width: ${(props) => props.theme.sharedSizes.sidebarWidth};
   padding: ${(props) => props.theme.sharedSizes.headerHeight} 0 0;
   z-index: ${(props) => props.theme.zIndexes.sidebar};
+  border-right: 1px solid ${(props) => props.theme.colors.gray0};
 `;
 
 const StdUlWrapper = styled.ul`

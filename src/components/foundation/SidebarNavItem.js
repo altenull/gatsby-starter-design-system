@@ -7,7 +7,7 @@ const StdSidebarNavItem = styled.li`
   background-color: ${(props) => props.theme.colors.white};
 
   & + & {
-    border-top: 1px solid ${(props) => props.theme.colors.black};
+    border-top: 1px solid ${(props) => props.theme.colors.gray0};
   }
 `;
 
@@ -16,7 +16,7 @@ const StdHeading4 = styled.h4`
   align-items: center;
   height: 48px;
   margin: 0;
-  padding-left: 16px;
+  padding-left: 24px;
   color: ${(props) => props.theme.colors.gray4};
 `;
 
