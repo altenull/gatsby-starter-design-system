@@ -8,15 +8,19 @@ const React = require('react');
 const { createGlobalStyle, ThemeProvider } = require('styled-components');
 
 const GlobalStyle = createGlobalStyle`
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
   html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
   }
 
   body {
+    font-family: 'Inter', sans-serif;
     margin: 0;
   }
 
   * {
+    font-family: 'Inter', sans-serif;
     box-sizing: border-box;
   }
 `;
@@ -39,6 +43,11 @@ exports.wrapRootElement = ({ element }) => {
     zIndexes: {
       sidebar: 900,
       header: 1000,
+    },
+    fontWeights: {
+      light: 300,
+      regular: 400,
+      semiBold: 600,
     },
   };
 
