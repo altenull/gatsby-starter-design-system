@@ -28,8 +28,13 @@ exports.wrapRootElement = ({ element }) => {
       sidebarWidth: '240px',
     },
     colors: {
-      black: '#000000',
       white: '#ffffff',
+      black: '#000000',
+      gray0: '#e9ecef',
+      gray1: '#ced4da',
+      gray2: '#868e96',
+      gray3: '#495057',
+      gray4: '#343a40',
     },
     zIndexes: {
       sidebar: 900,

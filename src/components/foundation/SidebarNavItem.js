@@ -17,6 +17,7 @@ const StdHeading4 = styled.h4`
   height: 48px;
   margin: 0;
   padding-left: 16px;
+  color: ${(props) => props.theme.colors.gray4};
 `;
 
 const StdUlWrapper = styled.ul`

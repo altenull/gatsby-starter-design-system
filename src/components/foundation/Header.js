@@ -20,6 +20,7 @@ const StdHeader = styled.header`
 
 const StdTitle = styled.span`
   font-size: 24px;
+  color: ${(props) => props.theme.colors.gray4};
 `;
 
 const Header = () => {

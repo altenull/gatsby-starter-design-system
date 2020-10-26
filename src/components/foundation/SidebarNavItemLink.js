@@ -8,9 +8,11 @@ const StdSidebarNavItemLink = styled.li`
   height: 40px;
   cursor: pointer;
   background-color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.gray2};
 
   &:hover {
-    background-color: lightgray;
+    background-color: ${(props) => props.theme.colors.gray0};
+    color: ${(props) => props.theme.colors.gray3};
   }
 `;
 
