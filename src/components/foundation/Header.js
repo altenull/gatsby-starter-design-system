@@ -11,9 +11,9 @@ const StdHeader = styled.header`
   display: flex;
   align-items: center;
   padding: 0 24px;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
   height: ${(props) => props.theme.sharedSizes.headerHeight};
   background-color: ${(props) => props.theme.colors.white};
-  border-bottom: 1px solid ${(props) => props.theme.colors.gray0};
   z-index: ${(props) => props.theme.zIndexes.header};
   transform: ${(props) => (props.shouldHideHeader ? 'translateY(-64px)' : 'translateY(0)')};
   transition: transform 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
