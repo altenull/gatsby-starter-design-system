@@ -5,7 +5,7 @@
  */
 // You can delete this file if you're not using it
 const React = require('react');
-const { createGlobalStyle } = require('styled-components');
+const { createGlobalStyle, ThemeProvider } = require('styled-components');
 
 const GlobalStyle = createGlobalStyle`
   html, body, #___gatsby, #gatsby-focus-wrapper {
@@ -22,10 +22,25 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 exports.wrapRootElement = ({ element }) => {
+  const theme = {
+    sharedSizes: {
+      headerHeight: '64px',
+      sidebarWidth: '240px',
+    },
+    colors: {
+      black: '#000000',
+      white: '#ffffff',
+    },
+    zIndexes: {
+      sidebar: 900,
+      header: 1000,
+    },
+  };
+
   return (
-    <React.Fragment>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       {element}
-    </React.Fragment>
+    </ThemeProvider>
   );
 };

@@ -11,6 +11,8 @@ const StdLayout = styled.div`
 
 const StdMain = styled.main`
   width: 100%;
+  margin-left: ${(props) => props.theme.sharedSizes.sidebarWidth};
+  margin-top: ${(props) => props.theme.sharedSizes.headerHeight};
 `;
 
 const Layout = ({ children }) => {
