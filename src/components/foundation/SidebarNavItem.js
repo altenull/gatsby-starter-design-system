@@ -12,9 +12,10 @@ const StdSidebarNavItem = styled.li`
   }
 `;
 
-const StdHeading4 = styled.h4`
+const StdTitle = styled.h4`
   display: flex;
   align-items: center;
+  font-size: 15px;
   height: 48px;
   margin: 0;
   padding-left: 24px;
@@ -32,7 +33,7 @@ const SidebarNavItem = ({ title, links }) => {
 
   return (
     <StdSidebarNavItem>
-      <StdHeading4>{title}</StdHeading4>
+      <StdTitle>{title}</StdTitle>
       <StdUlWrapper>{sidebarNavItemLinks}</StdUlWrapper>
     </StdSidebarNavItem>
   );

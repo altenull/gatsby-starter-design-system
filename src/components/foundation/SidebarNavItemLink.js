@@ -5,7 +5,8 @@ import PropTypes from 'prop-types';
 const StdSidebarNavItemLink = styled.li`
   display: flex;
   align-items: center;
-  padding-left: 32px;
+  padding-left: 24px;
+  font-size: 15px;
   height: 40px;
   cursor: pointer;
   background-color: ${(props) => props.theme.colors.white};
