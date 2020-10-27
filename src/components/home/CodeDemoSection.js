@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import useDemoCodeQuery from '../../hooks/useDemoCodeQuery';
-import CodeHighlighter from '../code/CodeHighlighter';
+import { CodeHighlighterContainer } from '../../containers/code';
 
 const StdCodeDemoSection = styled.section`
   position: relative;
@@ -14,7 +14,7 @@ const CodeDemoSection = () => {
 
   return (
     <StdCodeDemoSection>
-      <CodeHighlighter codeInHtml={demoButton.html} />
+      <CodeHighlighterContainer codeInHtml={demoButton.html} codeInRawMarkdownBody={demoButton.rawMarkdownBody} />
     </StdCodeDemoSection>
   );
 };

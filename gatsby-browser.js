@@ -52,6 +52,11 @@ exports.wrapRootElement = ({ element }) => {
       regular: 400,
       semiBold: 600,
     },
+    duration: {
+      fast: '100ms',
+      normal: '200ms',
+      slow: '300ms',
+    },
   };
 
   return (

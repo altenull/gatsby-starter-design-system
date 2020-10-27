@@ -5,8 +5,8 @@ const StdSvg = styled.svg`
   display: block;
   width: 24px;
   height: 24px;
+  box-sizing: initial;
   fill: ${(props) => props.theme.colors.white};
-  cursor: pointer;
 `;
 
 const CopyIcon = ({ ...props }) => {

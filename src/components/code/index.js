@@ -1,1 +1,1 @@
-export { default as CodeHighlighter } from './CodeHighlighter';
+export { default as CopyIconWithCopiedMessage } from './CopyIconWithCopiedMessage';
