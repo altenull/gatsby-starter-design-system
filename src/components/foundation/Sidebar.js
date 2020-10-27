@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Logo from './Logo';
 import SidebarNavItem from './SidebarNavItem';
 
 const SIDEBAR_NAV_ITEM_LINKS_WITH_TITLE = [
@@ -39,9 +40,16 @@ const StdSidebar = styled.nav`
   bottom: 0;
   overflow-y: auto;
   width: ${(props) => props.theme.sharedSizes.sidebarWidth};
-  padding: ${(props) => props.theme.sharedSizes.headerHeight} 0 0;
+  /* padding: ${(props) => props.theme.sharedSizes.headerHeight} 0 0; */
   z-index: ${(props) => props.theme.zIndexes.sidebar};
   border-right: 1px solid ${(props) => props.theme.colors.gray0};
+`;
+
+const StdLogoWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  padding-left: 24px;
+  height: ${(props) => props.theme.sharedSizes.headerHeight};
 `;
 
 const StdUlWrapper = styled.ul`
@@ -57,6 +65,10 @@ const Sidebar = () => {
 
   return (
     <StdSidebar>
+      <StdLogoWrapper>
+        <Logo />
+      </StdLogoWrapper>
+
       <StdUlWrapper>{sidebarNavItems}</StdUlWrapper>
     </StdSidebar>
   );
