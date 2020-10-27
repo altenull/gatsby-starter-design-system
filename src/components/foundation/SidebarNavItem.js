@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import SidebarNavItemLink from './SidebarNavItemLink';
@@ -35,6 +36,11 @@ const SidebarNavItem = ({ title, links }) => {
       <StdUlWrapper>{sidebarNavItemLinks}</StdUlWrapper>
     </StdSidebarNavItem>
   );
+};
+
+SidebarNavItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default SidebarNavItem;

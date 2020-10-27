@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const StdSidebarNavItemLink = styled.li`
   display: flex;
@@ -18,6 +19,10 @@ const StdSidebarNavItemLink = styled.li`
 
 const SidebarNavItemLink = ({ text }) => {
   return <StdSidebarNavItemLink>{text}</StdSidebarNavItemLink>;
+};
+
+SidebarNavItemLink.propTypes = {
+  text: PropTypes.string.isRequired,
 };
 
 export default SidebarNavItemLink;
