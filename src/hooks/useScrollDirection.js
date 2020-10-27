@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { ScrollDirection } from '../enums/scroll-direction.enum';
 
-const OFFSET = 64; // 64 is height of Header.
-
 const useScrollDirection = () => {
   const [scrollDirection, setScrollDirection] = useState(null);
   const [prevOffset, setPrevOffset] = useState(0);
@@ -10,7 +8,7 @@ const useScrollDirection = () => {
   const handleScroll = () => {
     const scrollY = window.scrollY;
 
-    setScrollDirection(scrollY <= OFFSET ? null : scrollY > prevOffset ? ScrollDirection.Down : ScrollDirection.Up);
+    setScrollDirection(scrollY === 0 ? null : scrollY > prevOffset ? ScrollDirection.Down : ScrollDirection.Up);
     setPrevOffset(scrollY);
   };
 
