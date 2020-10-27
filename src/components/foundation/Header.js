@@ -11,9 +11,7 @@ const StdHeader = styled.header`
   top: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
   height: ${(props) => props.theme.sharedSizes.headerHeight};
   background-color: ${(props) => props.theme.colors.white};
@@ -22,14 +20,19 @@ const StdHeader = styled.header`
   transition: transform 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
 `;
 
+const StdLogoWrapper = styled.div`
+  width: ${(props) => props.theme.sharedSizes.sidebarWidth};
+`;
+
 const StdLogo = styled.img`
   height: 48px;
+  margin-left: 24px;
   cursor: pointer;
 `;
 
 const StdSearchIconWrapper = styled.span`
-  padding: 8px;
   cursor: pointer;
+  border-left: 1px solid ${(props) => props.theme.colors.gray1};
 `;
 
 const Header = () => {
@@ -37,7 +40,10 @@ const Header = () => {
 
   return (
     <StdHeader shouldHideHeader={scrollDirection === ScrollDirection.Down}>
-      <StdLogo src={logoImage} alt='logo' />
+      <StdLogoWrapper>
+        <StdLogo src={logoImage} alt='logo' />
+      </StdLogoWrapper>
+
       <StdSearchIconWrapper>
         <SearchIcon />
       </StdSearchIconWrapper>
