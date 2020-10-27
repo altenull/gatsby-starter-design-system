@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import logoImage from '../../assets/images/logo(160x160).png';
 import { ScrollDirection } from '../../enums/scroll-direction.enum';
 import useScrollDirection from '../../hooks/useScrollDirection';
 
@@ -19,9 +20,9 @@ const StdHeader = styled.header`
   transition: transform 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
 `;
 
-const StdTitle = styled.span`
-  font-size: 24px;
-  color: ${(props) => props.theme.colors.gray4};
+const StdLogo = styled.img`
+  height: 48px;
+  cursor: pointer;
 `;
 
 const Header = () => {
@@ -29,7 +30,7 @@ const Header = () => {
 
   return (
     <StdHeader shouldHideHeader={scrollDirection === ScrollDirection.Down}>
-      <StdTitle>Design System</StdTitle>
+      <StdLogo src={logoImage} />
     </StdHeader>
   );
 };

@@ -5,7 +5,7 @@ import HeroImage from './HeroImage';
 const StdHeroSection = styled.section`
   position: relative;
   height: 80%;
-  background-color: ${(props) => props.theme.colors.gray1};
+  background-color: ${(props) => props.theme.colors.gray0};
 `;
 
 const StdHeading1 = styled.h1`
@@ -25,7 +25,7 @@ const StdHeroImage = styled(HeroImage)`
 const HeroSection = () => {
   return (
     <StdHeroSection>
-      <StdHeading1>Design System</StdHeading1>
+      <StdHeading1>Design System Starter</StdHeading1>
       <StdHeroImage />
     </StdHeroSection>
   );
