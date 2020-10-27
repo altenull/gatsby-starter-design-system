@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import logoImage from '../../assets/images/logo(160x160).png';
 import { ScrollDirection } from '../../enums/scroll-direction.enum';
 import useScrollDirection from '../../hooks/useScrollDirection';
+import Logo from './Logo';
 import SearchInput from './SearchInput';
 
 const StdHeader = styled.header`
@@ -21,13 +21,9 @@ const StdHeader = styled.header`
 `;
 
 const StdLogoWrapper = styled.div`
+  display: flex;
   padding-left: 24px;
   width: ${(props) => props.theme.sharedSizes.sidebarWidth};
-`;
-
-const StdLogo = styled.img`
-  height: 40px;
-  cursor: pointer;
 `;
 
 const StdSearchBox = styled.div`
@@ -41,7 +37,7 @@ const Header = () => {
   return (
     <StdHeader shouldHideHeader={scrollDirection === ScrollDirection.Down}>
       <StdLogoWrapper>
-        <StdLogo src={logoImage} alt='logo' />
+        <Logo />
       </StdLogoWrapper>
 
       <StdSearchBox>
