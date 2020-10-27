@@ -13,15 +13,15 @@ const StdButton = styled.button`
   font-size: 17px;
   font-weight: ${(props) => props.theme.fontWeights.semiBold};
   letter-spacing: 0.9px;
-  background-color: #ae3ec9;
+  background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
-  border: 2px solid #ae3ec9;
+  border: 2px solid ${(props) => props.theme.colors.primary};
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 
   &:hover {
     background-color: white;
-    color: #ae3ec9;
+    color: ${(props) => props.theme.colors.primary};
   }
 `;
 

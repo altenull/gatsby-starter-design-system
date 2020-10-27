@@ -42,6 +42,7 @@ exports.wrapRootElement = ({ element }) => {
       gray2: '#868e96',
       gray3: '#495057',
       gray4: '#343a40',
+      primary: '#ae3ec9',
     },
     zIndexes: {
       sidebar: 900,
