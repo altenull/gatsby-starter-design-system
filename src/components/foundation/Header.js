@@ -37,7 +37,7 @@ const Header = () => {
 
   return (
     <StdHeader shouldHideHeader={scrollDirection === ScrollDirection.Down}>
-      <StdLogo src={logoImage} />
+      <StdLogo src={logoImage} alt='logo' />
       <StdSearchIconWrapper>
         <SearchIcon />
       </StdSearchIconWrapper>
