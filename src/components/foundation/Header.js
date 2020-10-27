@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import logoImage from '../../assets/images/logo(160x160).png';
 import { ScrollDirection } from '../../enums/scroll-direction.enum';
 import useScrollDirection from '../../hooks/useScrollDirection';
-import { SearchIcon } from '../icon';
+import SearchInput from './SearchInput';
 
 const StdHeader = styled.header`
   position: fixed;
@@ -17,21 +17,21 @@ const StdHeader = styled.header`
   background-color: ${(props) => props.theme.colors.white};
   z-index: ${(props) => props.theme.zIndexes.header};
   transform: ${(props) => (props.shouldHideHeader ? 'translateY(-64px)' : 'translateY(0)')};
-  transition: transform 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+  transition: transform ${(props) => props.theme.duration.slow} cubic-bezier(0.47, 0, 0.745, 0.715);
 `;
 
 const StdLogoWrapper = styled.div`
+  padding-left: 24px;
   width: ${(props) => props.theme.sharedSizes.sidebarWidth};
 `;
 
 const StdLogo = styled.img`
-  height: 48px;
-  margin-left: 24px;
+  height: 40px;
   cursor: pointer;
 `;
 
-const StdSearchIconWrapper = styled.span`
-  cursor: pointer;
+const StdSearchBox = styled.div`
+  padding-left: 16px;
   border-left: 1px solid ${(props) => props.theme.colors.gray1};
 `;
 
@@ -44,9 +44,9 @@ const Header = () => {
         <StdLogo src={logoImage} alt='logo' />
       </StdLogoWrapper>
 
-      <StdSearchIconWrapper>
-        <SearchIcon />
-      </StdSearchIconWrapper>
+      <StdSearchBox>
+        <SearchInput />
+      </StdSearchBox>
     </StdHeader>
   );
 };

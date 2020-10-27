@@ -38,7 +38,7 @@ const CopyIconWithCopiedMessage = React.forwardRef(({ isHovered = false, hasCopi
     <div ref={ref} {...props}>
       <StdInnerWrapper>
         <StdCopyIconWrapper isHovered={isHovered} hasCopied={hasCopied}>
-          <StdCopyIcon />
+          <StdCopyIcon size={24} />
         </StdCopyIconWrapper>
 
         <StdCopySuccessMessage hasCopied={hasCopied}>Copied</StdCopySuccessMessage>
