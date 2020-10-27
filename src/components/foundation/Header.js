@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import logoImage from '../../assets/images/logo(160x160).png';
 import { ScrollDirection } from '../../enums/scroll-direction.enum';
 import useScrollDirection from '../../hooks/useScrollDirection';
+import { SearchIcon } from '../icon';
 
 const StdHeader = styled.header`
   position: fixed;
@@ -10,6 +11,7 @@ const StdHeader = styled.header`
   top: 0;
   right: 0;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0 24px;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
@@ -25,12 +27,20 @@ const StdLogo = styled.img`
   cursor: pointer;
 `;
 
+const StdSearchIconWrapper = styled.span`
+  padding: 8px;
+  cursor: pointer;
+`;
+
 const Header = () => {
   const scrollDirection = useScrollDirection();
 
   return (
     <StdHeader shouldHideHeader={scrollDirection === ScrollDirection.Down}>
       <StdLogo src={logoImage} />
+      <StdSearchIconWrapper>
+        <SearchIcon />
+      </StdSearchIconWrapper>
     </StdHeader>
   );
 };
