@@ -7,7 +7,7 @@ import Button from '../ui/Button';
 const StdCodeDemoSection = styled.section`
   position: relative;
   padding: 48px 80px;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: #ffffff;
 `;
 
 const StdContentHolder = styled.div`

@@ -14,7 +14,7 @@ const StdHeader = styled.header`
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
   height: ${(props) => props.theme.sharedSizes.headerHeight};
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: #ffffff;
   z-index: ${(props) => props.theme.zIndexes.header};
   transform: ${(props) => (props.shouldHideHeader ? 'translateY(-64px)' : 'translateY(0)')};
   transition: transform ${(props) => props.theme.duration.slow} cubic-bezier(0.47, 0, 0.745, 0.715);

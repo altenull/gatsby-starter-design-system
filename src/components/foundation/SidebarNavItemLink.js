@@ -9,7 +9,7 @@ const StdSidebarNavItemLink = styled.li`
   font-size: 15px;
   height: 40px;
   cursor: pointer;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: #ffffff;
   color: ${(props) => props.theme.colors.gray2};
 
   &:hover {

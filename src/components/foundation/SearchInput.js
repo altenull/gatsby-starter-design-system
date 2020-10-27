@@ -12,7 +12,7 @@ const StdInput = styled.input`
   width: inherit;
   height: inherit;
   border: none;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: #ffffff;
   padding: 0 0 0 24px;
   font-size: 16px;
   color: ${(props) => props.theme.colors.gray4};

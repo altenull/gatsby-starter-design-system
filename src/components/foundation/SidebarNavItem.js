@@ -5,7 +5,7 @@ import SidebarNavItemLink from './SidebarNavItemLink';
 
 const StdSidebarNavItem = styled.li`
   padding: 16px 0;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: #ffffff;
 
   & + & {
     border-top: 1px solid ${(props) => props.theme.colors.gray0};

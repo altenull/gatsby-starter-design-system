@@ -27,7 +27,7 @@ const StdCopySuccessMessage = styled.span`
   top: 8px;
   right: -8px;
   white-space: nowrap;
-  color: ${(props) => props.theme.colors.white};
+  color: #ffffff;
   transition: all ${(props) => props.theme.duration.slow};
   transform: ${(props) => (props.hasCopied ? 'translateX(-8px)' : 'translateX(0)')};
   opacity: ${(props) => (props.hasCopied ? '1' : '0')};

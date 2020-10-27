@@ -37,13 +37,13 @@ const StdButton = styled.button`
   font-weight: ${(props) => props.theme.fontWeights.semiBold};
   letter-spacing: 0.9px;
   cursor: pointer;
-  color: ${(props) => props.theme.colors.white};
+  color: #ffffff;
   transition: all 0.15s ease-in-out;
 
   ${(props) => kindToButtonStylesMap[props.kind]};
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.white};
+    background-color: #ffffff;
   }
 `;
 
