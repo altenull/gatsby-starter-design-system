@@ -9,7 +9,6 @@ const StdCodeDemoSection = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-  height: 40%;
   background-color: ${(props) => props.theme.colors.white};
 `;
 
@@ -18,17 +17,22 @@ const StdComponentDemoViewerWrapper = styled.div`
 `;
 
 const CodeDemoSection = () => {
-  const { demoButton } = useDemoCodeQuery();
-
-  const demo = <Button>Hello</Button>;
+  const { demoPrimaryButton, demoSecondaryButton } = useDemoCodeQuery();
 
   return (
     <StdCodeDemoSection>
       <StdComponentDemoViewerWrapper>
         <ComponentDemoViewer
-          demo={demo}
-          codeInHtml={demoButton.html}
-          codeInRawMarkdownBody={demoButton.rawMarkdownBody}
+          demo={<Button kind='primary'>Primary Button</Button>}
+          codeInHtml={demoPrimaryButton.html}
+          codeInRawMarkdownBody={demoPrimaryButton.rawMarkdownBody}
+        />
+
+        <br />
+        <ComponentDemoViewer
+          demo={<Button kind='secondary'>Secondary Button</Button>}
+          codeInHtml={demoSecondaryButton.html}
+          codeInRawMarkdownBody={demoSecondaryButton.rawMarkdownBody}
         />
       </StdComponentDemoViewerWrapper>
     </StdCodeDemoSection>

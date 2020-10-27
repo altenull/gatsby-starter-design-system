@@ -1,9 +1,13 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 const useDemoCodeQuery = () => {
-  const { demoButton } = useStaticQuery(graphql`
+  const { demoPrimaryButton, demoSecondaryButton } = useStaticQuery(graphql`
     query {
-      demoButton: markdownRemark(fileAbsolutePath: { regex: "/demo-button.md/" }) {
+      demoPrimaryButton: markdownRemark(fileAbsolutePath: { regex: "/demo-primary-button.md/" }) {
+        html
+        rawMarkdownBody
+      }
+      demoSecondaryButton: markdownRemark(fileAbsolutePath: { regex: "/demo-secondary-button.md/" }) {
         html
         rawMarkdownBody
       }
@@ -11,7 +15,8 @@ const useDemoCodeQuery = () => {
   `);
 
   return {
-    demoButton,
+    demoPrimaryButton,
+    demoSecondaryButton,
   };
 };
 
