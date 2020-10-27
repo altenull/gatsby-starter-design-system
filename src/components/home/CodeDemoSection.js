@@ -5,15 +5,28 @@ import { ComponentDemoViewer } from '../code';
 import Button from '../ui/Button';
 
 const StdCodeDemoSection = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
+  padding: 48px 80px;
   background-color: ${(props) => props.theme.colors.white};
 `;
 
-const StdComponentDemoViewerWrapper = styled.div`
-  width: 640px;
+const StdContentHolder = styled.div`
+  max-width: 560px;
+`;
+
+const StdTitle = styled.h2`
+  margin: 0 0 32px;
+  font-size: 30px;
+  font-weight: ${(props) => props.theme.fontWeights.semiBold};
+  color: ${(props) => props.theme.colors.gray4};
+`;
+
+const StdDescription = styled.p`
+  max-width: 720px;
+  font-size: 18px;
+  font-weight: ${(props) => props.theme.fontWeights.light};
+  line-height: 1.5;
+  color: ${(props) => props.theme.colors.gray3};
 `;
 
 const CodeDemoSection = () => {
@@ -21,7 +34,13 @@ const CodeDemoSection = () => {
 
   return (
     <StdCodeDemoSection>
-      <StdComponentDemoViewerWrapper>
+      <StdTitle>Code Highlighter</StdTitle>
+      <StdDescription>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s.
+      </StdDescription>
+
+      <StdContentHolder>
         <ComponentDemoViewer
           demo={<Button kind='primary'>Primary Button</Button>}
           codeInHtml={demoPrimaryButton.html}
@@ -34,7 +53,7 @@ const CodeDemoSection = () => {
           codeInHtml={demoSecondaryButton.html}
           codeInRawMarkdownBody={demoSecondaryButton.rawMarkdownBody}
         />
-      </StdComponentDemoViewerWrapper>
+      </StdContentHolder>
     </StdCodeDemoSection>
   );
 };
