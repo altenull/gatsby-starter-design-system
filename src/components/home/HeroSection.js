@@ -8,10 +8,20 @@ const StdHeroSection = styled.section`
   background-color: ${(props) => props.theme.colors.gray0};
 `;
 
-const StdHeading1 = styled.h1`
+const StdTitle = styled.h1`
   margin: 0;
   font-size: 64px;
   transform: translate(220px, 140px);
+  color: ${(props) => props.theme.colors.gray4};
+`;
+
+const StdDescription = styled.p`
+  margin: 0;
+  font-size: 21px;
+  font-weight: ${(props) => props.theme.fontWeights.light};
+  max-width: 600px;
+  color: ${(props) => props.theme.colors.gray2};
+  transform: translate(220px, 180px);
 `;
 
 const StdHeroImage = styled(HeroImage)`
@@ -25,7 +35,11 @@ const StdHeroImage = styled(HeroImage)`
 const HeroSection = () => {
   return (
     <StdHeroSection>
-      <StdHeading1>Design System Starter</StdHeading1>
+      <StdTitle>Design System Starter</StdTitle>
+      <StdDescription>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+        standard dummy text ever since the 1500s.
+      </StdDescription>
       <StdHeroImage />
     </StdHeroSection>
   );
