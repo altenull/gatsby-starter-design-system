@@ -5,9 +5,16 @@ import { ComponentDemoViewer } from '../code';
 import Button from '../ui/Button';
 
 const StdCodeDemoSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   height: 40%;
-  background-color: ${(props) => props.theme.colors.gray2};
+  background-color: ${(props) => props.theme.colors.white};
+`;
+
+const StdComponentDemoViewerWrapper = styled.div`
+  width: 640px;
 `;
 
 const CodeDemoSection = () => {
@@ -17,11 +24,13 @@ const CodeDemoSection = () => {
 
   return (
     <StdCodeDemoSection>
-      <ComponentDemoViewer
-        demo={demo}
-        codeInHtml={demoButton.html}
-        codeInRawMarkdownBody={demoButton.rawMarkdownBody}
-      />
+      <StdComponentDemoViewerWrapper>
+        <ComponentDemoViewer
+          demo={demo}
+          codeInHtml={demoButton.html}
+          codeInRawMarkdownBody={demoButton.rawMarkdownBody}
+        />
+      </StdComponentDemoViewerWrapper>
     </StdCodeDemoSection>
   );
 };

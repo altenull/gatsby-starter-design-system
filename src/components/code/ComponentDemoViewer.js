@@ -6,7 +6,11 @@ import { CodeHighlighterContainer } from '../../containers/code';
 const StdDemoViewer = styled.div`
   margin-bottom: -8px;
   padding: 40px 24px;
+  border: 1px solid ${(props) => props.theme.colors.gray0};
   background-color: ${(props) => props.theme.colors.white};
+  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center,
+    linear-gradient(#ffffff 21px, transparent 1%) center, #868e96;
+  background-size: 22px 22px;
 `;
 
 const ComponentDemoViewer = ({ demo, codeInHtml, codeInRawMarkdownBody, ...props }) => (
