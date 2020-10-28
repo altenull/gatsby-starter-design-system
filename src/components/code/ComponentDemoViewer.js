@@ -8,9 +8,9 @@ const StdDemoViewer = styled.div`
   padding: 40px 24px;
   border: 1px solid ${(props) => props.theme.colors.gray0};
   background-color: #ffffff;
-  background: linear-gradient(90deg, #ffffff 21px, transparent 1%) center,
-    linear-gradient(#ffffff 21px, transparent 1%) center, #868e96;
-  background-size: 22px 22px;
+  background: linear-gradient(90deg, #ffffff 10px, transparent 1%) center,
+    linear-gradient(#ffffff 10px, transparent 1%) center, ${(props) => props.theme.colors.gray2};
+  background-size: 11px 11px;
 `;
 
 const ComponentDemoViewer = ({ demo, codeInHtml, codeInRawMarkdownBody, ...props }) => (

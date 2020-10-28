@@ -6,19 +6,32 @@ import HeroImage from './HeroImage';
 const StdHeroSection = styled.section`
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
-  height: 448px;
+  padding: 24px 36px;
   background-color: ${(props) => props.theme.colors.gray0};
+
+  ${(props) => props.theme.mediaQueries.viewPort9} {
+    height: 448px;
+    padding: 64px 96px;
+  }
 `;
 
 const StdContentHolder = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+
+  ${(props) => props.theme.mediaQueries.viewPort9} {
+    flex-direction: row;
+  }
 `;
 
 const StdCopyWrapper = styled.div`
-  margin: auto 0;
+  margin: auto 0 32px;
+
+  ${(props) => props.theme.mediaQueries.viewPort9} {
+    margin: auto 0;
+  }
 `;
 
 const StdTitle = styled.h1`
@@ -29,17 +42,28 @@ const StdTitle = styled.h1`
 
 const StdDescription = styled.p`
   margin: 0 0 32px;
+  color: ${(props) => props.theme.colors.gray2};
   font-size: 16px;
   font-weight: ${(props) => props.theme.fontWeights.light};
   line-height: 1.5;
-  max-width: 680px;
-  color: ${(props) => props.theme.colors.gray2};
+
+  ${(props) => props.theme.mediaQueries.viewPort9} {
+    max-width: 632px;
+  }
 `;
 
 const StdHeroImage = styled(HeroImage)`
-  width: 360px;
+  width: 100%;
+  max-width: 320px;
   height: auto;
-  margin-left: 56px;
+  margin: 0 auto;
+
+  ${(props) => props.theme.mediaQueries.viewPort9} {
+    width: 360px;
+    min-width: 240px;
+    max-width: initial;
+    margin-left: 56px;
+  }
 `;
 
 const HeroSection = () => {
@@ -49,8 +73,7 @@ const HeroSection = () => {
         <StdCopyWrapper>
           <StdTitle>Design System Starter</StdTitle>
           <StdDescription>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s.
+            Build your design system website with a simple code highlighter that provided by this gatsby starter.
           </StdDescription>
           <Button kind='primary'>Getting Started</Button>
         </StdCopyWrapper>

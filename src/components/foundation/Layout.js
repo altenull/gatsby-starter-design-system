@@ -10,7 +10,7 @@ const StdLayout = styled.div`
 `;
 
 const StdMain = styled.main`
-  width: 100%;
+  width: calc(100% - ${(props) => props.theme.sharedSizes.sidebarWidth});
   margin-left: ${(props) => props.theme.sharedSizes.sidebarWidth};
   margin-top: ${(props) => props.theme.sharedSizes.headerHeight};
 `;

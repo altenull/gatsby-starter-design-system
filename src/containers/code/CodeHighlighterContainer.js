@@ -10,10 +10,15 @@ const StdCodeHighlighter = styled.div`
 `;
 
 const StdCopyIconWithCopiedMessage = styled(CopyIconWithCopiedMessage)`
+  display: none;
   position: absolute;
   top: 8px;
   right: 12px;
   cursor: pointer;
+
+  ${(props) => props.theme.mediaQueries.viewPort9} {
+    display: initial;
+  }
 `;
 
 const CodeHighlighterContainer = React.memo(({ codeInHtml, codeInRawMarkdownBody }) => {

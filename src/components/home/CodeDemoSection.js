@@ -6,8 +6,12 @@ import Button from '../ui/Button';
 
 const StdCodeDemoSection = styled.section`
   position: relative;
-  padding: 48px 80px;
+  padding: 24px 36px;
   background-color: #ffffff;
+
+  ${(props) => props.theme.mediaQueries.viewPort9} {
+    padding: 64px 96px;
+  }
 `;
 
 const StdContentHolder = styled.div`
@@ -22,7 +26,8 @@ const StdTitle = styled.h2`
 `;
 
 const StdDescription = styled.p`
-  max-width: 720px;
+  margin: 0 0 32px 0;
+  max-width: 792px;
   font-size: 18px;
   font-weight: ${(props) => props.theme.fontWeights.light};
   line-height: 1.5;
@@ -36,8 +41,7 @@ const CodeDemoSection = () => {
     <StdCodeDemoSection>
       <StdTitle>Code Highlighter</StdTitle>
       <StdDescription>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s.
+        We provides a customizable code highlighter with code block copy feature. You can also change the theme of it.
       </StdDescription>
 
       <StdContentHolder>
@@ -48,6 +52,8 @@ const CodeDemoSection = () => {
         />
 
         <br />
+        <br />
+
         <ComponentDemoViewer
           demo={<Button kind='secondary'>Secondary Button</Button>}
           codeInHtml={demoSecondaryButton.html}
