@@ -13,6 +13,7 @@ export const defaultTheme = {
     gray3: '#495057',
     gray4: '#343a40',
     primary: '#ae3ec9',
+    anchor: '#da77f2',
   },
   zIndexes: {
     sidebar: 900,

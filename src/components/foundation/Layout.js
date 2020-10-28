@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
+import Footer from './Footer';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
@@ -22,7 +23,10 @@ const Layout = ({ children }) => {
 
       <StdLayout>
         <Sidebar />
-        <StdMain>{children}</StdMain>
+        <StdMain>
+          {children}
+          <Footer />
+        </StdMain>
       </StdLayout>
     </Fragment>
   );
