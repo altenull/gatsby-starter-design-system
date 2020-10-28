@@ -6,9 +6,14 @@
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Design System Starter',
-    description: 'A simple starter to build a design system with Gatsby.',
+    description:
+      'Build your design system website with a simple code highlighter that provided by this gatsby starter.',
+    hosts: {
+      demoSite: 'https://gatsbydesignsystem.netlify.app',
+    },
   },
   plugins: [
+    'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-source-filesystem',
