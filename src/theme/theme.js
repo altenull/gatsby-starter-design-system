@@ -1,4 +1,4 @@
-import { createMediaQueries } from './media-query.util';
+import { createMediaQueries } from './media-query';
 
 export const defaultTheme = {
   mediaQueries: createMediaQueries(),

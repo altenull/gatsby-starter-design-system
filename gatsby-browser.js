@@ -8,7 +8,7 @@
 const React = require('react');
 const { createGlobalStyle, ThemeProvider } = require('styled-components');
 
-const { defaultTheme } = require('./src/theme/theme.util');
+const { defaultTheme } = require('./src/theme/theme');
 
 require('prismjs/themes/prism-tomorrow.css');
 
