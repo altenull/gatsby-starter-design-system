@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import useSiteMetadataQuery from '../../hooks/useSiteMetadataQuery';
 import { Button } from '../ui';
 import HeroImage from './HeroImage';
 
@@ -67,14 +68,14 @@ const StdHeroImage = styled(HeroImage)`
 `;
 
 const HeroSection = () => {
+  const { description } = useSiteMetadataQuery();
+
   return (
     <StdHeroSection>
       <StdContentHolder>
         <StdCopyWrapper>
           <StdTitle>Design System Starter</StdTitle>
-          <StdDescription>
-            Build your design system website with a simple code highlighter that provided by this gatsby starter.
-          </StdDescription>
+          <StdDescription>{description}</StdDescription>
           <Button kind='primary'>Getting Started</Button>
         </StdCopyWrapper>
 
