@@ -33,7 +33,7 @@ const StdCopySuccessMessage = styled.span`
   opacity: ${(props) => (props.hasCopied ? '1' : '0')};
 `;
 
-const CopyIconWithCopiedMessage = React.forwardRef(({ isHovered = false, hasCopied = false, ...props }, ref) => {
+const CopyIconWithCopiedMessage = React.forwardRef(({ isHovered, hasCopied, ...props }, ref) => {
   return (
     <div ref={ref} {...props}>
       <StdInnerWrapper>
@@ -50,6 +50,11 @@ const CopyIconWithCopiedMessage = React.forwardRef(({ isHovered = false, hasCopi
 CopyIconWithCopiedMessage.propTypes = {
   isHovered: PropTypes.bool,
   hasCopied: PropTypes.bool,
+};
+
+CopyIconWithCopiedMessage.defaultProps = {
+  isHovered: false,
+  hasCopied: false,
 };
 
 export default CopyIconWithCopiedMessage;
