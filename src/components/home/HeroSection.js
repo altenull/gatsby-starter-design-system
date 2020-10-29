@@ -8,7 +8,7 @@ const StdHeroSection = styled.section`
   position: relative;
   display: flex;
   align-items: center;
-  padding: 24px 36px;
+  padding: 40px 36px;
   background-color: ${(props) => props.theme.colors.gray0};
 
   ${(props) => props.theme.mediaQueries.viewPort9} {

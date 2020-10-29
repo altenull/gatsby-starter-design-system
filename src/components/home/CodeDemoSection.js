@@ -6,7 +6,7 @@ import Button from '../ui/Button';
 
 const StdCodeDemoSection = styled.section`
   position: relative;
-  padding: 24px 36px;
+  padding: 40px 36px;
   background-color: #ffffff;
 
   ${(props) => props.theme.mediaQueries.viewPort9} {
@@ -15,7 +15,7 @@ const StdCodeDemoSection = styled.section`
 `;
 
 const StdContentHolder = styled.div`
-  max-width: 560px;
+  max-width: 592px;
 `;
 
 const StdTitle = styled.h2`
