@@ -38,10 +38,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-exports.onInitialClientRender = () => {
-  require('typeface-inter');
-};
-
 exports.wrapRootElement = ({ element }) => {
   return (
     <ThemeProvider theme={defaultTheme}>
