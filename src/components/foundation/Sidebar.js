@@ -36,18 +36,20 @@ const SIDEBAR_NAV_ITEM_LINKS_WITH_TITLE = [
 
 const StdSidebar = styled.nav`
   position: fixed;
+  left: 0;
   top: 0;
   bottom: 0;
   overflow-y: auto;
   width: ${(props) => props.theme.sharedSizes.sidebarWidth};
   z-index: ${(props) => props.theme.zIndexes.sidebar};
   border-right: 1px solid ${(props) => props.theme.colors.gray0};
+  background-color: #ffffff;
 `;
 
 const StdLogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: ${(props) => props.theme.sharedSizes.sidebarPaddingLeft};
   height: ${(props) => props.theme.sharedSizes.headerHeight};
 `;
 

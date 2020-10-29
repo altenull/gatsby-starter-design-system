@@ -36,6 +36,12 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: underline;
     }
   }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
 `;
 
 exports.wrapRootElement = ({ element }) => {

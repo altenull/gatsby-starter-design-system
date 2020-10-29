@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const StdSidebarNavItemLink = styled.li`
   display: flex;
   align-items: center;
-  padding-left: 24px;
+  padding-left: ${(props) => props.theme.sharedSizes.sidebarPaddingLeft};
   font-size: 15px;
   height: 40px;
   cursor: pointer;

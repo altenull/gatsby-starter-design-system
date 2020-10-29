@@ -5,6 +5,7 @@ export const defaultTheme = {
   sharedSizes: {
     headerHeight: '64px',
     sidebarWidth: '240px',
+    sidebarPaddingLeft: '24px',
   },
   colors: {
     gray0: '#e9ecef',

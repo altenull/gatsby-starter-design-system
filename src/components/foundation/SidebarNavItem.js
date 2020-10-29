@@ -5,27 +5,21 @@ import SidebarNavItemLink from './SidebarNavItemLink';
 
 const StdSidebarNavItem = styled.li`
   padding: 16px 0;
-  background-color: #ffffff;
 
   & + & {
     border-top: 1px solid ${(props) => props.theme.colors.gray0};
   }
 `;
 
-const StdTitle = styled.h4`
+const StdTitle = styled.span`
   display: flex;
   align-items: center;
   font-size: 15px;
+  font-weight: ${(props) => props.theme.fontWeights.semiBold};
   height: 48px;
   margin: 0;
-  padding-left: 24px;
+  padding-left: ${(props) => props.theme.sharedSizes.sidebarPaddingLeft};
   color: ${(props) => props.theme.colors.gray4};
-`;
-
-const StdUlWrapper = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
 `;
 
 const SidebarNavItem = ({ title, links }) => {
@@ -34,7 +28,7 @@ const SidebarNavItem = ({ title, links }) => {
   return (
     <StdSidebarNavItem>
       <StdTitle>{title}</StdTitle>
-      <StdUlWrapper>{sidebarNavItemLinks}</StdUlWrapper>
+      <ul>{sidebarNavItemLinks}</ul>
     </StdSidebarNavItem>
   );
 };
