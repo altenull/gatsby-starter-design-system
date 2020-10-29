@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { CopyIconWithCopiedMessage } from '../../components/code';
 import useIsHovered from '../../hooks/useIsHovered';
-import { clipboardCopy } from '../../utils/clipboard.util';
+import { clipboardCopy } from '../../utils/clipboard';
 import PropTypes from 'prop-types';
 
 const StdCodeHighlighter = styled.div`
