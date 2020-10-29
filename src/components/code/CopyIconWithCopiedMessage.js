@@ -24,7 +24,7 @@ const StdCopyIcon = styled(CopyIcon)`
 
 const StdCopySuccessMessage = styled.span`
   position: absolute;
-  top: 8px;
+  top: 12px;
   right: -8px;
   white-space: nowrap;
   color: #ffffff;
