@@ -9,7 +9,7 @@ module.exports = {
     description:
       'Build your design system website with a simple code highlighter that provided by this gatsby starter.',
     hosts: {
-      demoSite: 'https://gatsbydesignsystem.netlify.app',
+      demoSite: 'https://gatsby-starter-design-system.netlify.app',
     },
   },
   plugins: [
