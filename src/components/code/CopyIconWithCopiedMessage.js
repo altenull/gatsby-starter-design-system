@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CopyIcon } from '../icon';
 
-const StdRelativeWrapper = styled.div`
+const StdCopyIconWithCopiedMessage = styled.div`
   position: relative;
 `;
 
@@ -35,15 +35,13 @@ const StdCopySuccessMessage = styled.span`
 
 const CopyIconWithCopiedMessage = React.forwardRef(({ isHovered, hasCopied, ...props }, ref) => {
   return (
-    <div ref={ref} {...props}>
-      <StdRelativeWrapper>
-        <StdCopyIconWrapper isHovered={isHovered} hasCopied={hasCopied}>
-          <StdCopyIcon size={24} />
-        </StdCopyIconWrapper>
+    <StdCopyIconWithCopiedMessage ref={ref} {...props}>
+      <StdCopyIconWrapper isHovered={isHovered} hasCopied={hasCopied}>
+        <StdCopyIcon size={24} />
+      </StdCopyIconWrapper>
 
-        <StdCopySuccessMessage hasCopied={hasCopied}>Copied</StdCopySuccessMessage>
-      </StdRelativeWrapper>
-    </div>
+      <StdCopySuccessMessage hasCopied={hasCopied}>Copied</StdCopySuccessMessage>
+    </StdCopyIconWithCopiedMessage>
   );
 });
 
