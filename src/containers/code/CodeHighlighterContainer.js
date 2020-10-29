@@ -21,6 +21,12 @@ const StdCopyIconWithCopiedMessage = styled(CopyIconWithCopiedMessage)`
   }
 `;
 
+/**
+ * @param {string} codeInHtml - This will be highlighten with prismjs depending on the theme
+ *     that imported from gatsby-browser.js and gatsby-ssr.js.
+ * @param {string} codeInRawMarkdownBody - A target of clipboard copy. If not passed as parameter,
+ *     then the copy icon won't be rendered.
+ */
 const CodeHighlighterContainer = React.memo(({ codeInHtml, codeInRawMarkdownBody }) => {
   const [hasCodeCopied, setHasCodeCopied] = useState(false);
   const [copyIconWithCopiedMessageRef, isCopyIconWithCopiedMessageRefHovered] = useIsHovered();
