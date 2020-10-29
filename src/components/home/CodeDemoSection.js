@@ -19,19 +19,13 @@ const StdContentHolder = styled.div`
 `;
 
 const StdTitle = styled.h2`
-  margin: 0 0 32px;
-  font-size: 30px;
-  font-weight: ${(props) => props.theme.fontWeights.semiBold};
-  color: ${(props) => props.theme.colors.gray4};
+  margin-bottom: 32px;
 `;
 
 const StdDescription = styled.p`
-  margin: 0 0 32px 0;
+  margin-bottom: 32px;
   max-width: 792px;
-  font-size: 18px;
-  font-weight: ${(props) => props.theme.fontWeights.light};
-  line-height: 1.5;
-  color: ${(props) => props.theme.colors.gray3};
+  font-size: 1.125rem;
 `;
 
 const CodeDemoSection = () => {

@@ -36,18 +36,13 @@ const StdCopyWrapper = styled.div`
 `;
 
 const StdTitle = styled.h1`
-  margin: 0 0 16px;
-  font-size: 48px;
-  font-weight: ${(props) => props.theme.fontWeights.semiBold};
-  color: ${(props) => props.theme.colors.gray4};
+  margin-bottom: 16px;
 `;
 
 const StdDescription = styled.p`
-  margin: 0 0 32px;
+  margin-bottom: 32px;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.gray2};
-  font-size: 16px;
-  font-weight: ${(props) => props.theme.fontWeights.light};
-  line-height: 1.5;
 
   ${(props) => props.theme.mediaQueries.viewPort9} {
     max-width: 632px;

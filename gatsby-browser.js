@@ -8,40 +8,15 @@
 const React = require('react');
 const { createGlobalStyle, ThemeProvider } = require('styled-components');
 
-const { defaultTheme } = require('./src/theme/theme');
+const { baseCss } = require('./src/styles/css/base');
+const { resetCss } = require('./src/styles/css/reset');
+const { defaultTheme } = require('./src/styles/theme/default-theme');
 
 require('prismjs/themes/prism-tomorrow.css');
 
 const GlobalStyle = createGlobalStyle`
-  html, body, #___gatsby, #gatsby-focus-wrapper {
-    height: 100%;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-  }
-
-  * {
-    font-family: 'Inter', sans-serif;
-    box-sizing: border-box;
-  }
-
-  a {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.anchor};
-    font-weight: ${(props) => props.theme.fontWeights.regular};
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+  ${resetCss}
+  ${baseCss}
 `;
 
 exports.wrapRootElement = ({ element }) => {
