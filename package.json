@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-design-system",
   "private": true,
-  "description": "A simple starter to build a design system with Gatsby",
+  "description": "A simple starter to build a design system website with Gatsby",
   "version": "1.0.0-0",
   "author": "Heonyoung Kim <altenull@gmail.com>",
   "license": "0BSD",
