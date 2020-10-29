@@ -1,4 +1,4 @@
-import { Breakpoint } from '../enums/breakpoint.enum';
+import { Breakpoint } from '../../enums/breakpoint.enum';
 
 const transformMinWidthToMediaQuery = (minWidth) => `@media screen and (min-width:${minWidth})`;
 
