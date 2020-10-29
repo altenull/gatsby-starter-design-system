@@ -5,7 +5,7 @@ const StdFooter = styled.footer`
   border-top: 1px solid ${(props) => props.theme.colors.gray0};
   padding: 24px 36px;
   text-align: center;
-  font-size: 15px;
+  font-size: 0.937rem;
   font-weight: ${(props) => props.theme.fontWeights.light};
   color: ${(props) => props.theme.colors.gray3};
 

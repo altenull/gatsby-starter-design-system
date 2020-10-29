@@ -33,7 +33,7 @@ const StdButton = styled.button`
   outline: none;
   border-radius: 32px;
   padding: 12px 24px;
-  font-size: 17px;
+  font-size: 1.0625rem;
   font-weight: ${(props) => props.theme.fontWeights.semiBold};
   letter-spacing: 0.9px;
   cursor: pointer;

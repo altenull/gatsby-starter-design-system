@@ -14,7 +14,7 @@ const StdSidebarNavItem = styled.li`
 const StdTitle = styled.span`
   display: flex;
   align-items: center;
-  font-size: 15px;
+  font-size: 0.937rem;
   font-weight: ${(props) => props.theme.fontWeights.semiBold};
   height: 48px;
   margin: 0;

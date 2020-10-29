@@ -14,7 +14,7 @@ const StdInput = styled.input`
   border: none;
   background-color: #ffffff;
   padding: 0 0 0 24px;
-  font-size: 16px;
+  font-size: 1rem;
   color: ${(props) => props.theme.colors.gray4};
 
   &:focus {

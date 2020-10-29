@@ -6,7 +6,7 @@ const StdSidebarNavItemLink = styled.li`
   display: flex;
   align-items: center;
   padding-left: ${(props) => props.theme.sharedSizes.sidebarPaddingLeft};
-  font-size: 15px;
+  font-size: 0.937rem;
   height: 40px;
   cursor: pointer;
   background-color: #ffffff;
