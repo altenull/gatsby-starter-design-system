@@ -38,7 +38,7 @@ const StdButton = styled.button`
   letter-spacing: 0.9px;
   cursor: pointer;
   color: #ffffff;
-  transition: all 0.15s ease-in-out;
+  transition: all ${(props) => props.theme.duration.normal};
 
   ${(props) => kindToButtonStylesMap[props.kind]};
 
