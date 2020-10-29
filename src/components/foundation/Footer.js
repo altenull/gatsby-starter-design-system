@@ -14,27 +14,17 @@ const StdFooter = styled.footer`
   }
 `;
 
-const StdAnchor = styled.a`
-  text-decoration: none;
-  color: ${(props) => props.theme.colors.anchor};
-  font-weight: ${(props) => props.theme.fontWeights.regular};
-
-  &:hover {
-    text-decoration: underline;
-  }
-`;
-
 const Footer = () => {
   return (
     <StdFooter>
       © 2020{' '}
-      <StdAnchor href='https://github.com/altenull' target='_blank' rel='noreferrer'>
+      <a href='https://github.com/altenull' target='_blank' rel='noreferrer'>
         altenull
-      </StdAnchor>
+      </a>
       , it’s a demo site of the{' '}
-      <StdAnchor href='https://github.com/altenull/gatsby-starter-design-system' target='_blank' rel='noreferrer'>
+      <a href='https://github.com/altenull/gatsby-starter-design-system' target='_blank' rel='noreferrer'>
         gatsby-starter-design-system
-      </StdAnchor>
+      </a>
     </StdFooter>
   );
 };

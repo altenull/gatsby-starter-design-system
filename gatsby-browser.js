@@ -28,6 +28,16 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
   }
+
+  a {
+    text-decoration: none;
+    color: ${(props) => props.theme.colors.anchor};
+    font-weight: ${(props) => props.theme.fontWeights.regular};
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `;
 
 exports.wrapRootElement = ({ element }) => {

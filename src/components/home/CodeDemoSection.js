@@ -41,7 +41,8 @@ const CodeDemoSection = () => {
     <StdCodeDemoSection>
       <StdTitle>Code Highlighter</StdTitle>
       <StdDescription>
-        We provides a customizable code highlighter with code block copy feature. You can also change the theme of it.
+        We provides a customizable code highlighter with code block copy feature. And you can also change the theme of
+        it.
       </StdDescription>
 
       <StdContentHolder>
