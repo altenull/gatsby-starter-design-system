@@ -14,8 +14,6 @@ const { defaultTheme } = require('./src/theme/theme');
 require('prismjs/themes/prism-tomorrow.css');
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
-
   html, body, #___gatsby, #gatsby-focus-wrapper {
     height: 100%;
   }

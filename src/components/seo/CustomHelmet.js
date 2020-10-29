@@ -15,6 +15,8 @@ const CustomHelmet = ({ title }) => {
       <meta property='og:url' content={hosts.demoSite} />
       <meta property='og:title' content={title} />
       <meta property='og:description' content={description} />
+
+      <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap' rel='stylesheet' />
     </Helmet>
   );
 };
