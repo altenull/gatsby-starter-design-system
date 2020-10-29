@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { CodeHighlighterContainer } from '../../containers/code';
 
-const StdDemoViewer = styled.div`
+const StdDemoPane = styled.div`
   margin-bottom: -8px;
   padding: 40px 24px;
   border: 1px solid ${(props) => props.theme.colors.gray0};
@@ -15,7 +15,7 @@ const StdDemoViewer = styled.div`
 
 const ComponentDemoViewer = ({ demo, codeInHtml, codeInRawMarkdownBody, ...props }) => (
   <div {...props}>
-    <StdDemoViewer>{demo}</StdDemoViewer>
+    <StdDemoPane>{demo}</StdDemoPane>
     <CodeHighlighterContainer codeInHtml={codeInHtml} codeInRawMarkdownBody={codeInRawMarkdownBody} />
   </div>
 );

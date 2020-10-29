@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import React, { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { CopyIconWithCopiedMessage } from '../../components/code';
 import useIsHovered from '../../hooks/useIsHovered';
 import { clipboardCopy } from '../../utils/clipboard';
-import PropTypes from 'prop-types';
 
 const StdCodeHighlighter = styled.div`
   position: relative;
@@ -31,14 +31,14 @@ const CodeHighlighterContainer = React.memo(({ codeInHtml, codeInRawMarkdownBody
     }
   }, [isCopyIconWithCopiedMessageRefHovered, hasCodeCopied, setHasCodeCopied]);
 
-  const handleCopyIconClick = (codeInRawMarkdownBody) => {
+  const handleCopyIconClick = useCallback((codeInRawMarkdownBody) => {
     const markdownCodeBlockRegExp = /(`{3})[a-zA-Z]*\n|(`{3})/g;
     const isClipboardCopySuccesss = clipboardCopy(codeInRawMarkdownBody.replace(markdownCodeBlockRegExp, ''));
 
     if (isClipboardCopySuccesss) {
       setHasCodeCopied(true);
     }
-  };
+  }, []);
 
   return (
     <StdCodeHighlighter>

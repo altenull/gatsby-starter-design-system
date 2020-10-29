@@ -38,6 +38,7 @@ const StdCopyWrapper = styled.div`
 const StdTitle = styled.h1`
   margin: 0 0 16px;
   font-size: 48px;
+  font-weight: ${(props) => props.theme.fontWeights.semiBold};
   color: ${(props) => props.theme.colors.gray4};
 `;
 

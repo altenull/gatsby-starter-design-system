@@ -40,7 +40,6 @@ const StdSidebar = styled.nav`
   bottom: 0;
   overflow-y: auto;
   width: ${(props) => props.theme.sharedSizes.sidebarWidth};
-  /* padding: ${(props) => props.theme.sharedSizes.headerHeight} 0 0; */
   z-index: ${(props) => props.theme.zIndexes.sidebar};
   border-right: 1px solid ${(props) => props.theme.colors.gray0};
 `;

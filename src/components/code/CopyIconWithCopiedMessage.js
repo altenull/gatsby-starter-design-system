@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { CopyIcon } from '../icon';
-import PropTypes from 'prop-types';
 
-const StdInnerWrapper = styled.div`
+const StdRelativeWrapper = styled.div`
   position: relative;
 `;
 
@@ -36,13 +36,13 @@ const StdCopySuccessMessage = styled.span`
 const CopyIconWithCopiedMessage = React.forwardRef(({ isHovered, hasCopied, ...props }, ref) => {
   return (
     <div ref={ref} {...props}>
-      <StdInnerWrapper>
+      <StdRelativeWrapper>
         <StdCopyIconWrapper isHovered={isHovered} hasCopied={hasCopied}>
           <StdCopyIcon size={24} />
         </StdCopyIconWrapper>
 
         <StdCopySuccessMessage hasCopied={hasCopied}>Copied</StdCopySuccessMessage>
-      </StdInnerWrapper>
+      </StdRelativeWrapper>
     </div>
   );
 });
