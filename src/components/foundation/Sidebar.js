@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
-import Logo from './Logo';
+import { BMCButton } from '../external';
 import SidebarNavItem from './SidebarNavItem';
 
 const SIDEBAR_NAV_ITEM_LINKS_WITH_TITLE = [
@@ -49,7 +49,7 @@ const StdSidebar = styled.nav`
 const StdLogoWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding-left: ${(props) => props.theme.sharedSizes.sidebarPaddingLeft};
+  padding: 0 ${(props) => props.theme.sharedSizes.sidebarPaddingLeft};
   height: ${(props) => props.theme.sharedSizes.headerHeight};
 `;
 
@@ -65,13 +65,15 @@ const Sidebar = () => {
   ));
 
   return (
-    <StdSidebar>
-      <StdLogoWrapper>
-        <Logo />
-      </StdLogoWrapper>
+    <Fragment>
+      <StdSidebar>
+        <StdLogoWrapper>
+          <BMCButton />
+        </StdLogoWrapper>
 
-      <StdUlWrapper>{sidebarNavItems}</StdUlWrapper>
-    </StdSidebar>
+        <StdUlWrapper>{sidebarNavItems}</StdUlWrapper>
+      </StdSidebar>
+    </Fragment>
   );
 };
 
