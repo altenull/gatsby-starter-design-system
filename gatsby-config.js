@@ -11,6 +11,9 @@ module.exports = {
     hosts: {
       demoSite: 'https://gatsby-starter-design-system.netlify.app',
     },
+    ids: {
+      buyMeACoffee: 'altenull',
+    },
   },
   plugins: [
     'gatsby-plugin-react-helmet',
