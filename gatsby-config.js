@@ -5,30 +5,31 @@
  */
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Design System Starter',
-    description: 'Build your design system website with a simple, intuitive and customizable code highlighter.',
+    title: `Gatsby Design System Starter`,
+    description: `Build your design system website with a simple, intuitive and customizable code highlighter.`,
+    author: `[Your Name]`,
     hosts: {
-      demoSite: 'https://gatsby-starter-design-system.netlify.app',
+      demoSite: `https://gatsby-starter-design-system.netlify.app`,
     },
     ids: {
-      buyMeACoffee: 'altenull',
+      buyMeACoffee: `altenull`,
     },
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    'gatsby-remark-prismjs',
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
+    `gatsby-remark-prismjs`,
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'codes',
+        name: `codes`,
         path: `${__dirname}/src/assets/codes`,
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: ['gatsby-remark-prismjs'],
+        plugins: [`gatsby-remark-prismjs`],
       },
     },
   ],
