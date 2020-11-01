@@ -4,10 +4,10 @@ import { Helmet } from 'react-helmet';
 import useSiteMetadataQuery from '../../hooks/useSiteMetadataQuery';
 
 const CustomHelmet = ({ title }) => {
-  const { description, hosts } = useSiteMetadataQuery();
+  const { description, language, hosts } = useSiteMetadataQuery();
 
   return (
-    <Helmet defer={false}>
+    <Helmet htmlAttributes={{ lang: language }} defer={false}>
       <title>{title}</title>
       <meta name='description' content={description} />
 

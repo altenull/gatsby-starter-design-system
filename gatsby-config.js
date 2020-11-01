@@ -8,6 +8,7 @@ module.exports = {
     title: `Gatsby Design System Starter`,
     description: `Build your design system website with a simple, intuitive and customizable code highlighter.`,
     author: `[Your Name]`,
+    language: `en`,
     hosts: {
       demoSite: `https://gatsby-starter-design-system.netlify.app`,
     },
