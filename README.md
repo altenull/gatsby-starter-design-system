@@ -51,13 +51,15 @@ See a [demo](https://gatsby-starter-design-system.netlify.app/) hosted on Netlif
 
 We provides a customizable code highlighter with code block copy feature. And you can also change the theme of it.
 
-<img src="./src/assets/images/code-highlighter-preview.png" alt="code highlighter" width="480" />
+<p align="center">
+  <img src="./src/assets/images/code-highlighter-preview.png" alt="code highlighter" width="680" />
+</p>
 
 ### gatsby-remark-prismjs
 
 We uses [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/) plugin to highlight the code blocks in markdown files. Since [gatsby-remark-prismjs](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs/) is based on [PrismJS](https://prismjs.com/), you can change the theme from the [list](https://prismjs.com/).
 
-* tomorrow night **(default theme)**.
+* tomorrow night **(default theme)**
 
 ### Customizing
 
